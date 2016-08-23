@@ -1,8 +1,17 @@
-const React = require('react');
-const ReactDOM = require('react-dom');
-const TestComponent = require('./components/TestComponent.jsx');
+import React from 'react'
+import { render } from 'react-dom'
+import { Provider } from 'react-redux'
+import { createStore } from 'redux'
+import cianMonitor from './reducers'
 
-ReactDOM.render(
-	<TestComponent/>,
+import App from './containers/App.jsx'
+
+
+const store = createStore(cianMonitor);
+
+render(
+	<Provider store={store}>
+		<App />
+	</Provider>,
 	document.getElementById("react-container")
 );

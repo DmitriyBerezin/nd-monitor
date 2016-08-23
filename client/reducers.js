@@ -1,18 +1,18 @@
-import * from './actions/action-types'
+import * as ActionTypes from './actions/action-types'
 
 const initialState = {
-	isStarted: false
+	isRunning: false
 };
 
 export default function cianMonitor(state = initialState, action) {
 	switch (action.type) {
-		case ACTION_START_SERVICE:
+		case ActionTypes.ACTION_START_SERVICE:
 			return Object.assign({}, state, {
-				isStarted: true;
+				isRunning: true
 			});
-		case ACTION_STOP_SERVICE:
+		case ActionTypes.ACTION_STOP_SERVICE:
 			return Object.assign({}, state, {
-				isStarted: false;
+				isRunning: false
 			});
 		default:
 			return state;

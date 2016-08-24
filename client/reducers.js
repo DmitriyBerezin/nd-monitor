@@ -6,11 +6,15 @@ const initialState = {
 
 export default function cianMonitor(state = initialState, action) {
 	switch (action.type) {
-		case ActionTypes.ACTION_START_SERVICE:
+		case ActionTypes.START_SERVICE_REQUEST:
+			return state;
+		case ActionTypes.START_SERVICE_SUCCESS:
 			return Object.assign({}, state, {
 				isRunning: true
 			});
-		case ActionTypes.ACTION_STOP_SERVICE:
+		case ActionTypes.STOP_SERVICE_REQUEST:
+			return state;
+		case ActionTypes.STOP_SERVICE_SUCCESS:
 			return Object.assign({}, state, {
 				isRunning: false
 			});

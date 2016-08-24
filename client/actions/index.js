@@ -1,10 +1,10 @@
 
-import * from './action-types.js'
+import * as ActionTypes from './action-types'
 
-export const startService() {
-	return { type: ACTION_START_SERVICE };
+export function startService() {
+	return { type: ActionTypes.ACTION_START_SERVICE };
 }
 
-export const stopService() {
-	return { type: ACTION_STOP_SERVICE };
+export function stopService() {
+	return { type: ActionTypes.ACTION_STOP_SERVICE };
 }
